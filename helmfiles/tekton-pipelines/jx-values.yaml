@@ -30,12 +30,15 @@ jxRequirements:
     gitName: github
     gitServer: https://github.com
     provider: minikube
+    registry: 10.97.242.4
   environments:
   - key: dev
+    owner: amassx
+    repository: jx3-mimikube
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: 192.168.1.142.nip.io
     externalDNS: false
     kind: ingress
     namespaceSubDomain: -tekton-pipelines.
@@ -43,6 +46,8 @@ jxRequirements:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: amassx
   repository: bucketrepo
   secretStorage: local
   vault: {}
